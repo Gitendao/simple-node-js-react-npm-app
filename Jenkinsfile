@@ -1,7 +1,7 @@
 pipeline {
     agent {
         node {
-            label 'simple-node-js-react-npm-app'
+            label 'node'
             customWorkspace 'd/Jenkins/workspace'
 
         }
