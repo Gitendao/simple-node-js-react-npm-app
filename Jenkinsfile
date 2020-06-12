@@ -11,12 +11,13 @@ pipeline {
         }
         stage('Yell Foo for me') {
             steps {
-                echo 'FOO'
+                echo 'Testing goes here'
             }
         }
         stage('Harry is a nerd') {
             steps {
-                echo'BAR'
+                echo'FOO'
+                echo 'BAR'
             }
         }
     }
