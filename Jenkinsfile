@@ -9,16 +9,14 @@ pipeline {
                 bat 'npm install'
             }
         }
-        stage('Test') {
+        stage('Foo') {
             steps {
-                sh './jenkins/scripts/test.sh'
+                bat 'echo FOO'
             }
         }
-        stage('Deliver') {
+        stage('Bar') {
             steps {
-                sh './jenkins/scripts/deliver.sh'
-                input message: 'Finished using the web site? (Click "Proceed" to continue)'
-                sh './jenkins/scripts/kill.sh'
+                bat 'echo BAR'
             }
         }
     }
