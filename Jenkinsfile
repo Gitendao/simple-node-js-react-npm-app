@@ -6,17 +6,17 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat 'npm install'
+                'npm install'
             }
         }
         stage('Yell Foo for me') {
             steps {
-                bat 'echo FOO'
+                echo 'FOO'
             }
         }
         stage('Harry is a nerd') {
             steps {
-                bat 'echo BAR'
+                echo'BAR'
             }
         }
     }
