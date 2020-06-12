@@ -9,12 +9,12 @@ pipeline {
                 bat 'npm install'
             }
         }
-        stage('Foo') {
+        stage('Yell Foo for me') {
             steps {
                 bat 'echo FOO'
             }
         }
-        stage('Bar') {
+        stage('Harry is a nerd') {
             steps {
                 bat 'echo BAR'
             }
