@@ -5,8 +5,8 @@ pipeline {
     }
     parameters {
         choice(     /*Choice Parameter offers choices to choose from*/
-            name: 'LOCKER',
-            choices: ['HBCIS','PRIM', 'HTRK', 'DWH'],
+            name: 'Who is running this test?',
+            choices: ['Harry','Dan', 'Dao', 'Some guy'],
             description: 'Lockers to test'
         )
         string(
