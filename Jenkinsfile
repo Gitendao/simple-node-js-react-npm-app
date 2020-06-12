@@ -12,7 +12,7 @@ pipeline {
         string(
             name: 'LOCKER_CODE',
             defaultValue: 'e.g HBCIS_01,DWH_02',
-            description: A comma-separated list of folders to extract
+            description: 'A comma-separated list of folders to extract'
         )
         booleanParam(       /*checkbox that offers true or false options*/
             name: 'PUSH_CHANGES',
@@ -39,9 +39,10 @@ pipeline {
         }
         stage('Summary of Selections') {
             steps {
+                /*You can reference parameters using just their names, or with the params. object. */
                 echo "Lockers: ${params.LOCKER}"
                 echo "Locker codes: ${params.LOCKER_CODE}"
-                echo "Push changes to target repo: ${params.PUSH_CHANGES}"
+                echo "Push changes to target repo: ${PUSH_CHANGES}"
             }
         }
         stage('Goodbye Message') {
